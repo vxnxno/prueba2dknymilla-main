@@ -33,7 +33,7 @@ export class ClaseRegistradaPage implements OnInit {
       quality: 90,
       allowEditing: false,
       resultType: CameraResultType.Uri,
-      source:CameraSource.Prompt
+      source:CameraSource.Camera
     });
 
     this.imageSource= this.domSanitizer.bypassSecurityTrustUrl(image.webPath ? image.webPath : "")

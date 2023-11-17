@@ -6,7 +6,7 @@
 
 
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true">
   <br>
   <ion-title>Clase Registrada</ion-title>
   <ion-card>
@@ -26,32 +26,28 @@
     <ion-card-header>
       <ion-card-title>Información del Usuario</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      <ul class="mostrar">
-        <li> Nombre: {{ usuarioActual?.nombre }}</li>
-        <li> Apellido: {{ usuarioActual?.apellido }}</li>
-        <li> RUT: {{ usuarioActual?.rut }}</li>
-      </ul>
-    </ion-card-content>
+
+    <ul class="mostrar">
+      <li> Nombre: {{ usuarioActual?.nombre }}</li>
+      <li> Apellido: {{ usuarioActual?.apellido }}</li>
+      <li> RUT: {{ usuarioActual?.rut }}</li>
+    </ul>
   </ion-card>
-  <ion-card>
-  <ion-list>
-    <ion-item>
-      <ion-label>Latitud:</ion-label>
-      <ion-note slot="end">{{ latitude }}</ion-note>
-    </ion-item>
-    <ion-item>
-      <ion-label>Longitud:</ion-label>
-      <ion-note slot="end">{{ longitude }}</ion-note>
-    </ion-item>
+  <br>
+  <br>
+  <ion-list class="fondito">
+    <ion-label>Latitud:</ion-label>
+    <ion-note slot="end">{{ latitude }}</ion-note>
+    <br>
+    <ion-label>Longitud:</ion-label>
+    <ion-note slot="end">{{ longitude }}</ion-note>
   </ion-list>
-  <ion-button expand="block" size="small" (click)="getCurrentLocation()">Obtener ubicación</ion-button>
-  </ion-card>
-<ion-card-content>
-    <div class="image-container">
-      <img [src]="getPhoto()" style="width: 250px;">
-    </div>
-    <ion-button expand="block" size="small" (click)="takePicture()"> ¡Hazte una Selfie! </ion-button>
-</ion-card-content>
+
+  <ion-button class="botoncito" expand="block" size="small" (click)="getCurrentLocation()">Obtener
+    ubicación</ion-button>
+  <div class="image-container">
+    <img [src]="getPhoto()" style="width: 250px;">
+  </div>
+  <ion-button expand="block" size="small" (click)="takePicture()">Opciones camara</ion-button>
 
 </ion-content>

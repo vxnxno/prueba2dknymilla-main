@@ -1,0 +1,42 @@
+ion-content{
+  --background: #240127;
+
+  ion-button{
+      --background: #5c0064;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+
+    }
+}
+h1{
+  text-align: center;
+  font-size: 2rem;
+  font-family: Arial;
+  font-weight: bolder;
+  color: white;
+}
+ion-title{
+  font-family:'Times New Roman';
+  transform: translateY(-40%);
+  font-size: 1.6rem;
+}
+ion-input{
+  color: white;
+}
+ion-toolbar{
+  --background: #240127;
+}
+.title-animation {
+  animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #dd9492;
+  }
+  100% {
+      color: #6b201d;
+    }
+}
+

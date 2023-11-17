@@ -1,0 +1,38 @@
+
+<ion-content [fullscreen]="true">
+  <div class="home-section ion-padding" >
+    <div class="heading ion-padding" >
+      <h1 class="animated-heading">Inicio de sesión</h1>
+    </div>
+
+    <div class="ion-padding center">
+        <ion-input
+          [(ngModel)]="usuario"
+          label="Usuario"
+          labelPlacement="floating"
+          [clearInput]="true"
+          placeholder="Ingrese su nombre de usuario"
+          errorText="Debe ingresar su nombre de usuario"
+          maxlength="25"
+          required>
+        </ion-input>
+        <ion-input
+          [(ngModel)]="contrasenia"
+          label="Contraseña"
+          labelPlacement="floating"
+          type="password"
+          placeholder="Ingrese su contraseña"
+          errorText="Debe ingresar su contraseña"
+          maxlength="12"
+          minlength="5"
+          required>
+        </ion-input>
+
+        <ion-button size="block" (click)="guardar()">Ingresar</ion-button>
+        <p><a (click)="registro()" >¿No tienes una cuenta?</a></p>
+        <p><a (click)="resetPass()" >¿Olvidó su contraseña?</a></p>
+    </div>
+  </div>
+
+
+</ion-content>

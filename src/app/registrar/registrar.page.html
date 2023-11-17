@@ -1,0 +1,100 @@
+<ion-toolbar >
+  <ion-buttons slot="end" routerLink="/home">
+    <ion-button>Volver</ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true">
+  <div class="home-section ion-padding" >
+    <div class="heading ion-padding" >
+      <h1>Registro</h1>
+    </div>
+
+    <!-- <form [formGroup]="formRegistro" (ngSubmit)="registrar()"> -->
+      <div class="ion-padding center">
+          <ion-label position="floating"></ion-label>
+          <ion-input
+            [(ngModel)]="nombre"
+            name="nombre"
+            labelPlacement="floating"
+            label="Nombre"
+            type="text"
+            placeholder="Introduzca su nombre"
+            errorText="Debe ingresar un nombre entre 3 y 12 caracteres"
+            required
+            minlength="3"
+            maxlength="12"
+          ></ion-input>
+          <ion-label position="floating"></ion-label>
+          <ion-input
+            [(ngModel)]="apellido"
+            name="apellido"
+            type="text"
+            labelPlacement="floating"
+            label="Apellido"
+            placeholder="Introduzca su apellido"
+            errorText="Debe ingresar un apellido entre 3 y 12 caracteres"
+            required
+            minlength="3"
+            maxlength="12"
+          ></ion-input>
+          <ion-label position="floating"></ion-label>
+          <ion-input
+            [(ngModel)]="rut"
+            name="rut"
+            labelPlacement="floating"
+            label="Rut"
+            type="text"
+            placeholder="Introduzca su rut"
+            errorText="Debe ingresar una contraseña entre 8 y 9 caracteres"
+            required
+            minlength="8"
+            maxlength="9"
+          ></ion-input>
+         <!-- Selección de Región -->
+         <ion-label position="stacked"></ion-label>
+         <ion-select label="Región" placeholder="Seleccione región" [(ngModel)]="region" (ionChange)="onRegionChange()" interface="popover">
+           <ion-select-option *ngFor="let reg of regiones" [value]="reg.id">{{ reg.nombre }}</ion-select-option>
+         </ion-select>
+
+         <!-- Selección de Comuna (se muestra solo cuando se ha seleccionado una región) -->
+         <div *ngIf="region">
+           <ion-label position="stacked"></ion-label>
+           <ion-select label="Comuna" placeholder="Seleccione comuna" [(ngModel)]="comuna"  interface="popover">
+             <ion-select-option *ngFor="let com of comunas" [value]="com.id">{{ com.nombre }}</ion-select-option>
+           </ion-select>
+         </div>
+
+         <ion-select label="Escuela" placeholder="Seleccione escuela" [(ngModel)]="escuela" (ionChange)="onEscuelaChange($event)" interface="popover">
+          <ion-select-option value="Administracion y Negocio">Administracion y Negocio</ion-select-option>
+          <ion-select-option value="Comunicacion">Comunicacion</ion-select-option>
+          <ion-select-option value="Gastronomia">Gastronomia</ion-select-option>
+          <ion-select-option value="Informatica y Telecomunicaciones">Informatica y Telecomunicaciones</ion-select-option>
+          <ion-select-option value="Salud">Salud</ion-select-option>
+          <ion-select-option value="Turismo y Hoteleria">Turismo y Hoteleria</ion-select-option>
+        </ion-select>
+
+        <div *ngIf="escuela">
+          <ion-select label="Carrera" placeholder="Seleccione carrera" [(ngModel)]="carrera" interface="popover">
+            <ion-select-option *ngFor="let option of opcionesCarrera" [value]="option">{{ option }}</ion-select-option>
+          </ion-select>
+        </div>
+
+        <ion-input
+          label="Contraseña:"
+          labelPlacement="floating"
+          type="password"
+          placeholder="Introduzca su contraseña"
+          errorText="Debe ingresar una contraseña entre 5 y 12 de longitud"
+          [(ngModel)]="contrasenia"
+          maxlength="12"
+          minlength="5"
+          required
+        ></ion-input>
+
+      <div class="action-button ion-padding">
+        <ion-button size="block" class="registrar" slot="end" type="submit" (click)="registro()" >Registrar</ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

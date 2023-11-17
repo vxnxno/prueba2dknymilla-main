@@ -1,0 +1,62 @@
+ion-content {
+  --background: #240127;
+}
+
+
+.home-section {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-100%);
+
+  .heading {
+    text-align: center;
+
+    h1 {
+      font-size: 2rem;
+      font-family: Arial;
+      font-weight: bolder;
+      color: white;
+    }
+
+    .animated-heading {
+      animation: fadeInUp 3s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  }
+
+  ion-button {
+    --background: #5c0064;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+
+  }
+
+  ion-input {
+    color: white;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-family: Arial;
+    color: white;
+
+
+  }
+}

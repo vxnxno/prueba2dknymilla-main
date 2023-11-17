@@ -1,0 +1,32 @@
+ion-content{
+  --background: #240127;
+
+  ion-card{
+      transform: translateY(20%);
+
+  }
+
+  ion-card-title{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 28px;
+      text-align: center;
+      color: #240127;
+
+  }
+
+}
+ion-toolbar{
+  --background: #240127;
+}
+ion-title{
+  transform: translateY(-40%);
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+}
+.mostrar {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5c0064;
+  font-weight: bold;
+}

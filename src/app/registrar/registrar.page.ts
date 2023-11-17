@@ -79,7 +79,7 @@ export class RegistrarPage implements OnInit {
       this.alertaUsuarioExistente();
       return;
     }
-    var usuario = this.nombre.substring(0,3).toUpperCase() + '.' + this.apellido.toLowerCase();
+    var usuario = this.nombre.substring(0,1).toUpperCase() + this.nombre.substring(1,3).toLowerCase() + '.' + this.apellido.toLowerCase();
 
 
     const regionId = this.regionSeleccionada;

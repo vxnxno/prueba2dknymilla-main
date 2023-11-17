@@ -17,7 +17,7 @@ h1{
   color: white;
 }
 ion-title{
-  font-family:'Times New Roman';
+  font-family:'arial';
   transform: translateY(-40%);
   font-size: 1.6rem;
 }
@@ -33,10 +33,10 @@ ion-toolbar{
 
 @keyframes colorChange {
   0% {
-    color: #dd9492;
+    color: white;
   }
   100% {
-      color: #6b201d;
+      color: #5c0064;
     }
 }
 

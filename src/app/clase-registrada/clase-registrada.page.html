@@ -28,8 +28,8 @@
     </ion-card-header>
 
     <ul class="mostrar">
-      <li> Nombre: {{ usuarioActual?.nombre }}</li>
-      <li> Apellido: {{ usuarioActual?.apellido }}</li>
+      <li> Nombre: {{ usuarioActual?.nombre | titlecase }}</li>
+      <li> Apellido: {{ usuarioActual?.apellido | titlecase }}</li>
       <li> RUT: {{ usuarioActual?.rut }}</li>
     </ul>
   </ion-card>
